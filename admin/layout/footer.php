@@ -1,6 +1,6 @@
 
 <div id="footer-wp">
-    <div class="wp-inner">
+    <div class="">
         <p id="copyright">2018 © Admin Theme by Php Master</p>
     </div>
 </div>

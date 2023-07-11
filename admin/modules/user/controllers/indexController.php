@@ -3,7 +3,9 @@
         load_model("index");
     }
 
-    function indexAction(){
+    function loginAction(){
+        // echo date("h:m:s d/m/Y");
+
         if (isset($_POST['btn_login'])){
             global $error;
     
@@ -11,23 +13,21 @@
             if (!empty($_POST['remember_me']))
                 $remember = true;
             
-            if (check_active($_POST['username'])){
+           
                 if (check_login($_POST['username'],$_POST['password'])){
                     login($_POST['username'],$_POST['password'],$remember);
                     redirect();
                 }
-                else 
-                    $error['status'] = "Sai thông tin đăng nhập, vui lòng thử lại!"; 
             }else 
                 $error['status'] = "Bạn chưa xác thực email, vui lòng thử lại!"; 
-        }
 
         $data['title_page'] = "Login";
-        load_view("index",$data);
+        load_view("login",$data);
     }
 
     function logoutAction(){
         logout();
+        
     }
 
     function resetAction(){
@@ -142,19 +142,62 @@
         load_view("signup",$data);
     }
 
-    function activeAction(){
-        $token = $_GET['reset_token'];
-        $data['title_page'] = "Active tài khoản";
+    function info_userAction(){
+        $data['title_page'] = "Thông tin tài khoản";
+        
+        if (isset($_POST['btn-submit'])){
+                $data_import = array();
+                if (!empty($_POST['display-name']))
+                    $data_import['display_name'] = $_POST['display-name'];
 
-        if (active_user($token)){
-            $link_login = base_url("?mod=user");
-            $data['is_active'] = true;
-            $data['content'] = "Bạn đã kích hoạt tài khoản thành công, ấn vào link để đăng nhập <a href='{$link_login}'>Đăng nhập</a>";                
-        } else {
-            $data['is_active'] = false;
-            $data['content'] = "Mã kích hoạt không hợp lệ hoặc tài khoản đã được kích hoạt trước đó!";
+                if (!empty($_POST['email']))
+                    $data_import['email']= $_POST['email'];
+
+                if (!empty($_POST['tel']))
+                    $data_import['num_phone']= $_POST['tel'];
+
+                if (!empty($_POST['address']))
+                    $data_import['address']= $_POST['address'];
+                
+                if (!empty($data_import))
+                    update_info_user($data_import);
+                
+            }
+        $data['info_user'] = get_user_by_username(get_username());
+        load_view('info_user',$data);
+    }
+
+    function reset_PassAction(){
+        $data = array();
+        $data['title_page'] = "Đổi mật khẩu";
+        if (isset($_POST['btn-submit'])){
+            foreach ($_POST as $key=> $value){
+                if ($key != 'btn-submit')
+                    if (empty($value))
+                        $data['error'][$key] = "Vui lòng nhập dữ liệu!";
+                    else
+                        $data["value"][$key] = $value;
+            }
+
+            if (!is_pass_old(md5($_POST['pass-old'])))
+                $data['error']['pass-old'] = "Mật khẩu cũ không khớp!";
+
+            if (!check_macth_pass($_POST['pass-new'],$_POST['confirm-pass']))
+                $data['error']['confirm-pass'] = "Mật khẩu mới không khớp!";
+
+            if (empty($data['error'])){
+                $pass = md5($_POST['pass-new']);
+                $data_import = array(
+                    'password' => $pass
+                );
+
+                if (update_info_user($data_import))
+                    $data['update_success'] = true;
+                else
+                    $data['update_success'] = false;
+            }
+
         }
-
-        load_view('active',$data);
-    }  
+        load_view('reset_Pass',$data);
+    }
 ?>

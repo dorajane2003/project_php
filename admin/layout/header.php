@@ -8,9 +8,8 @@
         <link href="public/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="public/reset.css" rel="stylesheet" type="text/css"/>
         <link href="public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="public/style.css" rel="stylesheet" type="text/css"/>
-        <link href="public/responsive.css" rel="stylesheet" type="text/css"/>
-
+        <link href="public/style.css" rel="stylesheet" type="text/css">
+        <link href="public/responsive.css" rel="stylesheet" type="text/css">
         <script src="public/js/jquery-2.2.4.min.js" type="text/javascript"></script>
         <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
         <script src="public/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
@@ -82,11 +81,11 @@
                                 <div id="thumb-circle" class="fl-left">
                                     <img src="public/images/img-admin.png">
                                 </div>
-                                <h3 id="account" class="fl-right">Admin</h3>
+                                <h3 id="account" class="fl-right">  <?php echo get_display_user();?></h3>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
-                                <li><a href="#" title="Thoát">Thoát</a></li>
+                                <li><a href="?mod=user&action=info_user" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
+                                <li><a href="?mod=user&action=logout" title="Thoát">Thoát</a></li>
                             </ul>
                         </div>
                     </div>

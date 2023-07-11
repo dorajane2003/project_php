@@ -72,17 +72,16 @@ function db_update($table, $data, $where) {
     $sql = "";
     foreach ($data as $field => $value) {
         if ($value === NULL)
-            $sql .= "$field=NULL, ";
+            $sql .= "`$field`=NULL, ";
         else
-            $sql .= "$field='" . escape_string($value) . "', ";
+            $sql .= "`$field`='" . escape_string($value) . "', ";
     }
     $sql = substr($sql, 0, -2);
-    db_query("
-            UPDATE $table
+    return db_query("
+            UPDATE `$table`
             SET $sql
             WHERE $where
    ");
-    return mysqli_affected_rows($conn);
 }
 
 function db_delete($table, $where) {

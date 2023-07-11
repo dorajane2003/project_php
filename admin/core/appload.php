@@ -84,7 +84,7 @@ if (!empty($_COOKIE['is_login'])){
 }
 
 if (empty($_SESSION['is_login']) &&  get_module() != 'user')
-    redirect("?mod=user");
+    redirect("?mod=user&action=login");
     
 require COREPATH.DIRECTORY_SEPARATOR."router.php";
 ?>

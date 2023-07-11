@@ -1,0 +1,153 @@
+body{
+    background-color: #7bc15b;
+    font-family: arial;
+    letter-spacing: 1px;
+}
+.active-body,
+#wp-form-login{
+    width:350px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 100px auto;
+    color:#4FA327;
+
+}
+
+.changePass-body{
+    height:250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.changePass-body h1{
+    margin-top: 10px;
+}
+#form-login{
+    border: 2px solid #003857;
+}
+
+.active-body{   
+    height:120px;
+    text-align: center;
+}
+.active-body img{
+    margin-top:10px ;
+}
+#form-login h1{
+    font-weight: 700;
+}
+#form-login label{
+    display: block;
+    margin:20px 0 10px;
+}
+
+#form-login input[type=password],
+#form-login input[type=text]{
+    padding: 4px 0;
+    width:100%;
+}
+#form-login input[type=checkbox]{
+    display: inline-block;
+}
+.changePass-body input[type=submit],
+#form-login input[type=submit]{
+    display: block;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 2px;
+    background-color: #4FA327;
+    color:#e6e5e5;
+    margin: 10px auto;
+}
+#form-login a{
+    display: block;
+    color: #003857;
+    margin:5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.body-form{
+    padding: 10px 20px;
+}
+.error{
+    margin: 5px 0;
+    color:red;
+    font-weight: 500;
+}
+
+table{
+    border-collapse: collapse;
+    border-bottom:1px solid #66c8fd;
+    width:100%;
+    align-items: center;
+}
+
+th, tr{
+    border: none;
+}
+
+th{
+    /* display: inline-block; */
+    padding-top:8px;
+    padding-bottom:8px;
+    cursor: pointer;
+}
+
+th a{
+    text-decoration: none;
+}
+.active{
+    background: #0aa9ff;
+    color: #fff;
+}
+#modal-show{
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-form{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height:200px;
+    background:#fff;
+    text-align: center;
+    margin: 0px auto;
+}
+.modal-body{
+    position: relative;
+    padding:20px 10px;
+}
+
+
+.close-modal{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 8px 12px;
+}
+.title-modal{
+    padding:20px 0 10px;
+}
+
+#btn-redirectHome-modal{
+    padding: 8px 12px;
+}
+
+.button{
+    text-align: center;
+    border: none;
+}
+
+.button > tr > td:first-child{
+    border-left: 1px solid #000;
+}
+
+
+
+

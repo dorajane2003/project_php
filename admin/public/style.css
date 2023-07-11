@@ -1,11 +1,10 @@
-/*STYLE*/
-@import 'public/css/import/fonts.css';
-@import 'public/css/import/global.css';
-@import 'public/css/import/list_post.css';
-@import 'public/css/import/list_product.css';
-@import 'public/css/import/add_cat.css';
-@import 'public/css/import/info_account.css';
-@import 'public/css/import/change_pass.css';
-@import 'public/css/import/sidebar.css';
-@import 'public/css/import/menu.css';
-@import 'public/css/import/detail_order.css';
+@import 'css/import/fonts.css';
+@import 'css/import/global.css';
+@import 'css/import/list_post.css';
+@import 'css/import/list_product.css';
+@import 'css/import/add_cat.css';   
+@import 'css/import/info_account.css';
+@import 'css/import/change_pass.css';
+@import 'css/import/sidebar.css';
+@import 'css/import/menu.css';
+@import 'css/import/detail_order.css';

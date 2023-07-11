@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+#create_post{
+    width:960px;
+    margin:0 auto;
+}
+h1{
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin:15px 0 10px;
+}
+
+input[type=submit]{
+    display: block;
+    margin: 10px auto;
+    padding:4px 24px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+}
+
+.error{
+    color:red;
+    text-transform: inherit;
+    font-weight: 600;
+}
+
+
+
+#wrapper{
+    font-family: Arial;
+}
+
+#footer,
+#header{
+    /* background-color: #ffd400; */
+    
+    min-height: 50px;
+    text-align: center;
+ 
+}
+#header-main > a{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+#content,
+#header-main{
+    width:900px;
+    margin:0px auto;
+    position:relative;
+}
+
+#content{
+    min-height: 600px;
+}
+
+#main-nav{
+    background-color: #0aa9ff;
+    list-style: none;
+    text-align: center;
+    
+}
+
+#main-nav>li{
+    display: inline-block;
+}
+#main-nav>li>a{
+    display: block;
+    color: #fff;
+    padding:12px 24px;
+    text-decoration: none;
+}
+
+.item-post{
+    border:1px solid #ddd;
+    padding:12px;
+    margin: 10px 0;
+}
+
+.img-post{
+    display:inline-block;
+    width:200px;
+}
+
+.content-post{
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 550px;
+}
+.title-post{
+    margin:10px 0;
+}
+
+.item-product{
+    width:200px;
+    border: 1px solid #ddd;
+    padding:12px 24px;
+    margin:10px;
+    display: inline-block;
+    
+}
+.img-product{
+    width:100px;
+    margin:0px auto;
+}
+
+.btn-buy-product{
+    width:100%;
+    display: block;
+    padding:8px 12px;
+    margin:0px auto;
+    background-color: #212020;
+    color: #fff;
+    border-radius: 5px;
+}
+#search-product{
+    display: inline-block;
+    position: relative;
+    width:250px;
+    max-height:100px;
+}
+.search-main{
+    position: absolute;
+    top: -20px;
+}
+.btn-search{
+    display: inline-block;
+    padding:4px 8px;
+    background-color: #000;
+    color: #ddd;
+    margin-left:-10px;
+}
+.input-search{
+    display: inline-block;
+    padding:4px 8px;
+    
+}
+
+#userLogin{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+#userLogin > p > a{
+    text-decoration: none;
+   
+}

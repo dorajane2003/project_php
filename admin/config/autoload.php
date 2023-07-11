@@ -8,6 +8,6 @@
  * ----------------------------------------------------------------------------------
  */ 
 
-$autoload['helper'] = array("validation","url");
+$autoload['helper'] = array("user","data","validation","url");
 $autoload['lib'] = array();
 ?>
